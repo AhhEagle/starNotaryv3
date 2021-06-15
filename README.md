@@ -1,10 +1,5 @@
-# ND1309 C2 Ethereum Smart Contracts, Tokens and Dapps - Project Starter 
-**PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.
-
-### ToDo
-This Starter Code has already implemented the functionalities you implemented in the StarNotary (Version 2) exercise, and have comments in all the files you need to implement your tasks.
-
-
+# Udacity Ethereum Smart Contracts, Tokens and Dapps
+Creation of a DApp by adding functionality with your smart contract and deploy it on the public testnet.
 
 ### Dependencies
 For this project, you will need to have:
@@ -93,7 +88,7 @@ When you will add a new Rinkeyby Test Network in your Metamask client, you will 
 
 | Network Name | New RPC URL | Chain ID |
 |---|---|---|
-|Private Network 1|`http://127.0.0.1:9545/`|1337 |
+|Private Network 1|`http://127.0.0.1:7545/`|1337 |
 
 The chain ID above can be fetched by:
 ```bash
@@ -128,11 +123,6 @@ compilers: {
     // ...
 ```
 
-## Raise a PR or report an Issue
-1. Feel free to raise a [Pull Request](https://github.com/udacity/nd1309-p2-Decentralized-Star-Notary-Service-Starter-Code/pulls) if you find a bug/scope of improvement in the current repository. 
-
-2. If you have suggestions or facing issues, you can log in issue. 
-
----
-
-Do not use the [Old depreacted zipped starter code](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/January/5c51c4c0_project-5-starter-code/project-5-starter-code.zip)
+### Token Details
+- ERC-721 Token Name: Dimeji Token
+- ERC-721 Token Symbol: DT 

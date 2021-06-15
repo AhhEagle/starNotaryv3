@@ -1,3 +1,5 @@
+//import { assert } from "console";
+
 import { assert } from "console";
 
 const StarNotary = artifacts.require("StarNotary");
@@ -84,18 +86,31 @@ it('can add the star name and star symbol properly', async() => {
     let newUser = accounts[1];
     let starId  = 6;
     await instance.createStar('New Awesome Star', starId, {from: newUser});
-   let name = await instance.name();
-   let symbol = await instance.symbol();
-   let lookUp = await instance.lookUptokenIdToStarInfo(starId);
+   let name = await instance.starName();
+   let symbol = await instance.starSymbol();
    assert.equal(name, 'Dimeji Token');
    assert.equal(symbol, 'DT');
 
 });
 
 it('lets 2 users exchange stars', async() => {
+    let instance = await StarNotary.deployed();
+    let newUser1 = accounts[0];
+    let newUser2 = accounts[1]
+    let newUserId1 =  7;
+    let newUserId2 = 8;
     // 1. create 2 Stars with different tokenId
+    await instance.createStar('new star 1', newUserId1, {from: newUser1});
+    await instance.createStar('new star 2', newUserId2, {from: newUser2});
+    await instance.approve(newUser2, newUserId1, {from: newUser1});
+    await instance.approve(newUser1, newUserId2, {from: newUser2});
     // 2. Call the exchangeStars functions implemented in the Smart Contract
+    await instance.exchangeStars(newUserId1, newUserId2, {from: newUser1});
+    let firstStar = await instance.ownerOf.call(newUserId1);
+    let secondStar = await instance.ownerOf.call(newUserId2);
     // 3. Verify that the owners changed
+    assert.equal(firstStar, newUser2);
+    assert.equal(secondStar, newUser1)
 });
 
 it('lets a user transfer a star', async() => {

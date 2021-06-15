@@ -14,7 +14,9 @@ contract StarNotary is ERC721 {
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
     // symbol: Is a short string like 'USD' -> 'American Dollar'
-    constructor() public ERC721("Dimeji Token", "DT"){}
+    
+     string public starName='Dimeji Token';
+     string public starSymbol='DT';
     
 
     // mapping the Star with the Owner Address
@@ -58,6 +60,7 @@ contract StarNotary is ERC721 {
     // Implement Task 1 lookUptokenIdToStarInfo
     function lookUptokenIdToStarInfo (uint _tokenId) public view returns (string memory) {
         //1. You should return the Star saved in tokenIdToStarInfo mapping
+        require(bytes(tokenIdToStarInfo[_tokenId].name).length > 0, "Unknown star");
         return tokenIdToStarInfo[_tokenId].name;
     }
 

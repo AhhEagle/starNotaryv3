@@ -126,3 +126,5 @@ compilers: {
 ### Token Details
 - ERC-721 Token Name: Dimeji Token
 - ERC-721 Token Symbol: DT 
+- contact address: 0x5b34c4948538786978557F7BBeDb988Aa04643e8
+- EtherScan Address: https://rinkeby.etherscan.io/token/0x5b34c4948538786978557f7bbedb988aa04643e8?a=0xd32ade69e40331b374b6b0fb76b1d993eb33326c

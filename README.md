@@ -84,7 +84,7 @@ npm run dev
 ---
 
 ### Important
-When you will add a new Rinkeyby Test Network in your Metamask client, you will have to provide:
+When adding a new Rinkeyby Test Network in your Metamask client, you will have to provide:
 
 | Network Name | New RPC URL | Chain ID |
 |---|---|---|

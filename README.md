@@ -105,8 +105,6 @@ node index.js
 - Delete the node_modules folder, the one within the /app folder
 - Execute `npm install` command from the /app folder
 
-After a long install, everything will work just fine!
-
 
 #### Error 2
 ```

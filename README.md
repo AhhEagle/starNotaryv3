@@ -25,7 +25,7 @@ truffle version
 ```
 
 
-2. **Metamask: 5.3.1** - If you need to update Metamask just delete your Metamask extension and install it again.
+2. **Metamask: 5.3.1** -  If you need to update Metamask just delete your Metamask extension and install it again.
 
 
 3. [Ganache](https://www.trufflesuite.com/ganache) - Make sure that your Ganache and Truffle configuration file have the same port.
